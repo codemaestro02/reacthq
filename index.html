@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram.com</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container{
+            width: 100%;
+        }
+
+        header{
+            width: 100%;
+            
+        }
+
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            place-items: center;
+            position: fixed;
+            border-bottom: 2px solid #efefef;
+
+        }
+
+        .logo{
+            position: absolute;
+            left: 50px;
+        }
+        .logo img{
+            height: 40px;
+        }
+
+        .search{
+            width: 30%;
+            position: relative;
+
+        }
+
+        #search{
+            width: 100%;
+            height: 40px;
+            background-color: #efefef;
+            border: 2px solid #efefef;
+            border-radius: 8px;
+            padding-left: 50px;
+        }
+
+        #search::placeholder{
+            font-size: 16px;
+        }
+
+        #search:focus{
+            width: 105%;
+            transform: translateX(-5%);
+            border: 2px solid #efefef;
+            outline: none;
+            padding-left: 20px;
+        }
+
+        .search img{
+            position: absolute;
+            left: 20px;
+            top: 12px;
+        }
+
+        .you{
+            justify-content: flex-end;
+            place-items: center;
+
+        }
+
+        li{
+            display: inline;
+            list-style: none;
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        
+        .you img{
+            width: 26px;
+        }
+
+        .avatar{
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 760px) {
+            nav{
+                justify-content: space-evenly;
+                gap: 10px;
+
+            }
+
+            .logo{
+                position: initial;
+            }
+            .logo img{
+                height: 40px;
+            }
+
+            .search{
+                width: 40%;
+                position: relative;
+
+            }
+
+            #search{
+                width: 100%;
+                height: 35px;
+                padding-left: 50px;
+            }
+
+            #search::placeholder{
+                font-size: 16px;
+            }
+
+            .search img{
+                left: 20px;
+                top: 9.5px;
+            }
+
+            #search:focus{
+                width: 100%;
+                transform: translateX(0);
+                padding-left: 20px;
+            }
+
+            .you{
+                width: fit-content;
+
+            }
+
+            li{
+                padding-left: 1px;
+            }
+            
+            .you img{
+                width: 22px;
+            }
+
+            .avatar{
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        @media (max-width:700px) {
+            nav{
+                justify-content: flex-start;
+                gap: 60px;
+
+
+            }
+
+            .logo img{
+                height: 35px;
+            }
+
+            .search{
+                width: 50%;
+                position: relative;
+
+            }
+
+            #search:focus{
+                width: 120%;
+            }
+
+            .you{
+                cursor: pointer;
+                content: url("./img/menu.png");
+                padding-left: 10px;
+            }
+
+            .you:active{
+                content: none;
+                width: fit-content;
+                position: absolute;
+                right: 0;
+                top: 0px;
+                padding-left: 10px;
+                background-color: #efefef;
+                display: flex;
+                flex-direction: column;
+                place-content: center;
+
+            }
+        }
+
+        @media (max-width:550px) {
+            nav{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                gap: 40px;
+                padding: 10px 20px;
+
+            }
+
+            .logo img{
+                height: 30px;
+            }
+
+            .search{
+                width: 50%;
+                position: relative;
+
+            }
+
+            #search{
+                height: 35px;
+                padding-left: 40px;
+            }
+
+            #search::placeholder{
+                font-size: 13px;
+            }
+
+            .search img{
+                position: absolute;
+                left: 15px;
+                top: 9.5px;
+            }
+
+
+ 
+            
+        }
+
+        @media (max-width: 300px) {
+            nav{
+                gap: 10px;
+
+            }
+
+            .logo img{
+                height: 27px;
+            }
+
+            #search{
+                width: 100%;
+                height: 30px;
+                padding-left: 35px;
+            }
+
+            .search img{
+                width: 14px;
+                left: 15px;
+                top: 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#"><img src="./img/Instagram_logo.svg.png" alt=""></a> 
+                </div>
+                <div class="search">
+                    <a href="#" for="search"><img src="./img/search.png" alt=""></a>
+                    <input type="search" name="search" id="search" placeholder="Search">
+                </div>
+                <ul class="you">
+                    <li><a href="#"><img src="./img/homepage.png" alt=""></a></li>
+                    <li><a href="#"><img src="./img/messenger.png" alt=""></a></li>
+                    <li><a href="#"><img src="./img/add.png" alt=""></a></li>
+                    <li><a href="#"><img src="./img/compass.png" alt=""></a></li>
+                    <li><a href="#"><img src="./img/heart.png" alt=""></a></li>
+                    <li><a href="#"><img class="avatar" src="./img/avatar.jpg" alt=""></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>
